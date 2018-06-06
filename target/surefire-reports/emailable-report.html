@@ -1,0 +1,1364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">2</td><td class="numi">2</td><td class="numi_attn">72</td><td class="numi_attn">1</td><td class="numi">758.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Command line test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">com.qa.admin.testCases.AdminAddNewUserPageTest</td><td><a href="#m1"><b>setup</b>  </a></td><td class="numi">1</td><td>1528088920436</td><td class="numi">0</td></tr>
+<tr class="failedeven"><td rowspan="1">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m2"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089616182</td><td class="numi">0</td></tr>
+<tr class="failedodd"><td rowspan="1">com.qa.admin.testCases.AdminLoginPageTest</td><td><a href="#m3"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089469297</td><td class="numi">0</td></tr>
+<tr class="failedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest</td><td><a href="#m4"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089479793</td><td class="numi">0</td></tr>
+<tr class="failedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminChangePasswordPageTest</td><td><a href="#m5"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1528089525640</td><td class="numi">0</td></tr>
+<tr class="failedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m6"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089526966</td><td class="numi">0</td></tr>
+<tr class="failedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest</td><td><a href="#m7"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089535674</td><td class="numi">0</td></tr>
+<tr class="failedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest</td><td><a href="#m8"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089542010</td><td class="numi">0</td></tr>
+<tr class="failedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminHomePageTest</td><td><a href="#m9"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089550291</td><td class="numi">0</td></tr>
+<tr class="failedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminLoginPageTest</td><td><a href="#m10"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089645807</td><td class="numi">0</td></tr>
+<tr class="failedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m11"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089576959</td><td class="numi">0</td></tr>
+<tr class="failedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportPageTest</td><td><a href="#m12"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089600804</td><td class="numi">0</td></tr>
+<tr class="failedodd"><td rowspan="1">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m13"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089616182</td><td class="numi">0</td></tr>
+<tr class="failedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminLoginPageTest</td><td><a href="#m14"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089645807</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Command line test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminChangePasswordPageTest</td><td><a href="#m15"><b>verifyChangePassword</b>  </a></td><td class="numi">1</td><td>1528089521184</td><td class="numi">4438</td></tr>
+<tr><th colspan="4">Command line test &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.admin.testCases.AdminAddNewUserPageTest</td><td><a href="#m16"><b>setup</b>  </a></td><td class="numi">6</td><td>1528089616181</td><td class="numi">62646</td></tr>
+<tr class="skippedeven"><td rowspan="2">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m17"><b>setup</b>  </a></td><td class="numi">4</td><td>1528089678831</td><td class="numi">156</td></tr><tr class="skippedeven"><td><a href="#m18"><b>tearDown</b>  </a></td><td class="numi">5</td><td>1528089645802</td><td class="numi">33185</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.admin.testCases.AdminLoginPageTest</td><td><a href="#m19"><b>setup</b>  </a></td><td class="numi">2</td><td>1528089645802</td><td class="numi">33031</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest</td><td><a href="#m20"><b>setup</b>  </a></td><td class="numi">7</td><td>1528089645803</td><td class="numi">33185</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m21"><b>setup</b>  </a></td><td class="numi">8</td><td>1528089645805</td><td class="numi">33190</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest</td><td><a href="#m22"><b>setup</b>  </a></td><td class="numi">5</td><td>1528089645805</td><td class="numi">33184</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest</td><td><a href="#m23"><b>setup</b>  </a></td><td class="numi">7</td><td>1528089645806</td><td class="numi">33184</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminHomePageTest</td><td><a href="#m24"><b>setup</b>  </a></td><td class="numi">5</td><td>1528089645807</td><td class="numi">33184</td></tr>
+<tr class="skippedodd"><td rowspan="2">com.qa.appadmin.testCases.AppAdminLoginPageTest</td><td><a href="#m25"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089678907</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m26"><b>tearDown</b>  </a></td><td class="numi">2</td><td>1528089669638</td><td class="numi">9270</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m27"><b>setup</b>  </a></td><td class="numi">6</td><td>1528089669638</td><td class="numi">9356</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportPageTest</td><td><a href="#m28"><b>setup</b>  </a></td><td class="numi">10</td><td>1528089669639</td><td class="numi">9347</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m29"><b>setup</b>  </a></td><td class="numi">4</td><td>1528089678831</td><td class="numi">156</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminLoginPageTest</td><td><a href="#m30"><b>setup</b>  </a></td><td class="numi">1</td><td>1528089678907</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.admin.testCases.AdminAddNewUserPageTest</td><td><a href="#m31"><b>tearDown</b>  </a></td><td class="numi">7</td><td>1528089349563</td><td class="numi">329266</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportPageTest</td><td><a href="#m32"><b>tearDown</b>  </a></td><td class="numi">11</td><td>1528089616180</td><td class="numi">62806</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m33"><b>tearDown</b>  </a></td><td class="numi">9</td><td>1528089535674</td><td class="numi">143322</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest</td><td><a href="#m34"><b>tearDown</b>  </a></td><td class="numi">8</td><td>1528089493683</td><td class="numi">185305</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m35"><b>tearDown</b>  </a></td><td class="numi">7</td><td>1528089600803</td><td class="numi">78191</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminHomePageTest</td><td><a href="#m36"><b>tearDown</b>  </a></td><td class="numi">6</td><td>1528089558780</td><td class="numi">120212</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.admin.testCases.AdminLoginPageTest</td><td><a href="#m37"><b>tearDown</b>  </a></td><td class="numi">3</td><td>1528089479793</td><td class="numi">199040</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest</td><td><a href="#m38"><b>tearDown</b>  </a></td><td class="numi">8</td><td>1528089550290</td><td class="numi">128701</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest</td><td><a href="#m39"><b>tearDown</b>  </a></td><td class="numi">6</td><td>1528089542010</td><td class="numi">136980</td></tr>
+<tr><th colspan="4">Command line test &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.admin.testCases.AdminAddNewUserPageTest</td><td><a href="#m40"><b>addNewUserPageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089349560</td><td class="numi">2</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.admin.testCases.AdminLoginPageTest</td><td><a href="#m41"><b>loginPageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089479792</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest</td><td><a href="#m42"><b>StudiesPageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089493654</td><td class="numi">14</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m43"><b>ConfigPageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089535673</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest</td><td><a href="#m44"><b>DeletePageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089542009</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest</td><td><a href="#m45"><b>DeletePageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089550290</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminHomePageTest</td><td><a href="#m46"><b>homePageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089558773</td><td class="numi">7</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m47"><b>reportDownloadPageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089600802</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportPageTest</td><td><a href="#m48"><b>homePageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089616180</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.admin.testCases.AdminAddNewUserPageTest</td><td><a href="#m49"><b>verifyAddUserPageUserNameTest</b>  </a></td><td class="numi">1</td><td>1528089616181</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m50"><b>verifyUserNameTest</b>  </a></td><td class="numi">1</td><td>1528089645801</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.admin.testCases.AdminLoginPageTest</td><td><a href="#m51"><b>norwichLogoTest</b>  </a></td><td class="numi">1</td><td>1528089645802</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest</td><td><a href="#m52"><b>verifyUserNameTest</b>  </a></td><td class="numi">1</td><td>1528089645804</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m53"><b>verifyUserNameTest</b>  </a></td><td class="numi">1</td><td>1528089645805</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest</td><td><a href="#m54"><b>verifyUserNameTest</b>  </a></td><td class="numi">1</td><td>1528089645806</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest</td><td><a href="#m55"><b>verifyUserNameTest</b>  </a></td><td class="numi">1</td><td>1528089645806</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminHomePageTest</td><td><a href="#m56"><b>verifyUserNameTest</b>  </a></td><td class="numi">1</td><td>1528089645807</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminLoginPageTest</td><td><a href="#m57"><b>norwichLogoTest</b>  </a></td><td class="numi">1</td><td>1528089669637</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m58"><b>verifyUserNameTest</b>  </a></td><td class="numi">1</td><td>1528089669638</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportPageTest</td><td><a href="#m59"><b>verifyUserNameTest</b>  </a></td><td class="numi">1</td><td>1528089669639</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="5">com.qa.admin.testCases.AdminAddNewUserPageTest</td><td><a href="#m60"><b>verifyAddNewUsers</b>  </a></td><td class="numi">5</td><td>1528089678822</td><td class="numi">7</td></tr><tr class="skippedodd"><td><a href="#m61"><b>verifyAddNewUsers</b>  </a></td><td class="numi">5</td><td>1528089678822</td><td class="numi">7</td></tr><tr class="skippedodd"><td><a href="#m62"><b>verifyAddNewUsers</b>  </a></td><td class="numi">5</td><td>1528089678822</td><td class="numi">7</td></tr><tr class="skippedodd"><td><a href="#m63"><b>verifyAddNewUsers</b>  </a></td><td class="numi">5</td><td>1528089678822</td><td class="numi">7</td></tr><tr class="skippedodd"><td><a href="#m64"><b>verifyAddNewUsers</b>  </a></td><td class="numi">5</td><td>1528089678822</td><td class="numi">7</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m65"><b>AddNewUserTest</b>  </a></td><td class="numi">1</td><td>1528089678832</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.admin.testCases.AdminLoginPageTest</td><td><a href="#m66"><b>loginTest</b>  </a></td><td class="numi">1</td><td>1528089678833</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="4">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest</td><td><a href="#m67"><b>verifySubmitButtonTest</b>  </a></td><td class="numi">4</td><td>1528089678897</td><td class="numi">3</td></tr><tr class="skippedeven"><td><a href="#m68"><b>verifySubmitButtonTest</b>  </a></td><td class="numi">4</td><td>1528089678897</td><td class="numi">3</td></tr><tr class="skippedeven"><td><a href="#m69"><b>verifySubmitButtonTest</b>  </a></td><td class="numi">4</td><td>1528089678897</td><td class="numi">3</td></tr><tr class="skippedeven"><td><a href="#m70"><b>verifySubmitButtonTest</b>  </a></td><td class="numi">4</td><td>1528089678897</td><td class="numi">3</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m71"><b>verifyClickOnViewLink</b>  </a></td><td class="numi">1</td><td>1528089678901</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest</td><td><a href="#m72"><b>verifyCRFReadyButton</b>  </a></td><td class="numi">1</td><td>1528089678902</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest</td><td><a href="#m73"><b>verifyDeleteButton</b>  </a></td><td class="numi">1</td><td>1528089678902</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="3">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest</td><td><a href="#m74"><b>verifyCancelButton</b>  </a></td><td class="numi">1</td><td>1528089678903</td><td class="numi">1</td></tr><tr class="skippedeven"><td><a href="#m75"><b>verifyPreviewButton</b>  </a></td><td class="numi">1</td><td>1528089678904</td><td class="numi">1</td></tr><tr class="skippedeven"><td><a href="#m76"><b>verifyUpdateButton</b>  </a></td><td class="numi">1</td><td>1528089678905</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminHomePageTest</td><td><a href="#m77"><b>ConfigurationTest</b>  </a></td><td class="numi">1</td><td>1528089678906</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminLoginPageTest</td><td><a href="#m78"><b>loginTest</b>  </a></td><td class="numi">1</td><td>1528089678907</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m79"><b>verifyDownloadLink</b>  </a></td><td class="numi">1</td><td>1528089678908</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="7">com.qa.appadmin.testCases.AppAdminReportPageTest</td><td><a href="#m80"><b>verifyReportPage</b>  </a></td><td class="numi">7</td><td>1528089678963</td><td class="numi">12</td></tr><tr class="skippedeven"><td><a href="#m81"><b>verifyReportPage</b>  </a></td><td class="numi">7</td><td>1528089678963</td><td class="numi">12</td></tr><tr class="skippedeven"><td><a href="#m82"><b>verifyReportPage</b>  </a></td><td class="numi">7</td><td>1528089678963</td><td class="numi">12</td></tr><tr class="skippedeven"><td><a href="#m83"><b>verifyReportPage</b>  </a></td><td class="numi">7</td><td>1528089678963</td><td class="numi">12</td></tr><tr class="skippedeven"><td><a href="#m84"><b>verifyReportPage</b>  </a></td><td class="numi">7</td><td>1528089678963</td><td class="numi">12</td></tr><tr class="skippedeven"><td><a href="#m85"><b>verifyReportPage</b>  </a></td><td class="numi">7</td><td>1528089678963</td><td class="numi">12</td></tr><tr class="skippedeven"><td><a href="#m86"><b>verifyReportPage</b>  </a></td><td class="numi">7</td><td>1528089678963</td><td class="numi">12</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m87"><b>ListUserTest</b>  </a></td><td class="numi">1</td><td>1528089678976</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m88"><b>verifyClickOnConfigLink</b>  </a></td><td class="numi">1</td><td>1528089678977</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminHomePageTest</td><td><a href="#m89"><b>ReportsTest</b>  </a></td><td class="numi">1</td><td>1528089678978</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest</td><td><a href="#m90"><b>verifyCancelButton</b>  </a></td><td class="numi">1</td><td>1528089678978</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m91"><b>verifyBackLink</b>  </a></td><td class="numi">1</td><td>1528089678979</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportPageTest</td><td><a href="#m92"><b>ChangePasswordTest</b>  </a></td><td class="numi">1</td><td>1528089678980</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m93"><b>ChangePasswordTest</b>  </a></td><td class="numi">1</td><td>1528089678981</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest</td><td><a href="#m94"><b>ChangePasswordTest</b>  </a></td><td class="numi">1</td><td>1528089678981</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m95"><b>verifyClickOnDeleteLink</b>  </a></td><td class="numi">1</td><td>1528089678982</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest</td><td><a href="#m96"><b>ChangePasswordTest</b>  </a></td><td class="numi">1</td><td>1528089678983</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest</td><td><a href="#m97"><b>ChangePasswordTest</b>  </a></td><td class="numi">1</td><td>1528089678984</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminHomePageTest</td><td><a href="#m98"><b>ChangePasswordTest</b>  </a></td><td class="numi">1</td><td>1528089678985</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m99"><b>ChangePasswordTest</b>  </a></td><td class="numi">1</td><td>1528089678985</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportPageTest</td><td><a href="#m100"><b>LogoutTest</b>  </a></td><td class="numi">1</td><td>1528089678986</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m101"><b>LogoutTest</b>  </a></td><td class="numi">1</td><td>1528089678987</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest</td><td><a href="#m102"><b>LogoutTest</b>  </a></td><td class="numi">1</td><td>1528089678988</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m103"><b>verifyClickOnAddNewLink</b>  </a></td><td class="numi">1</td><td>1528089678989</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest</td><td><a href="#m104"><b>LogoutTest</b>  </a></td><td class="numi">1</td><td>1528089678990</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest</td><td><a href="#m105"><b>LogoutTest</b>  </a></td><td class="numi">1</td><td>1528089678990</td><td class="numi">1</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminHomePageTest</td><td><a href="#m106"><b>LogoutTest</b>  </a></td><td class="numi">1</td><td>1528089678991</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m107"><b>LogoutTest</b>  </a></td><td class="numi">1</td><td>1528089678992</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m108"><b>verifyClickOnApplyLink</b>  </a></td><td class="numi">1</td><td>1528089678993</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest</td><td><a href="#m109"><b>verifyMenuClick</b>  </a></td><td class="numi">1</td><td>1528089678994</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="2">com.qa.appadmin.testCases.AppAdminConfigurationPageTest</td><td><a href="#m110"><b>ChangePasswordTest</b>  </a></td><td class="numi">1</td><td>1528089678995</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m111"><b>LogoutTest</b>  </a></td><td class="numi">1</td><td>1528089678995</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Command line test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">com.qa.admin.testCases.AdminHomePageTest</td><td><a href="#m112"><b>homePageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089469026</td><td class="numi">8</td></tr>
+<tr class="passedeven"><td rowspan="1">com.qa.appadmin.testCases.AppAdminLoginPageTest</td><td><a href="#m113"><b>loginPageTitleTest</b>  </a></td><td class="numi">1</td><td>1528089575341</td><td class="numi">11</td></tr>
+</table>
+<h1>Command line test</h1>
+<h2 id="m1">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:setup</h2>
+<div style="padding-left:3em">
+<p>Failed to decode response from marionette
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 16060, moz:profile: C:\Users\Silpa\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 2acbfc48-8731-47cf-ad33-45002635ca12</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:657)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:891)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWindow.maximize(EventFiringWebDriver.java:685)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:55)
+<br/>at com.qa.appadmin.testCases.AppAdminEditStudiesPageTest.setup(AppAdminEditStudiesPageTest.java:40)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:setup</h2>
+<div style="padding-left:3em">
+<p>[Exception... &quot;Failure&quot;  nsresult: &quot;0x80004005 (NS_ERROR_FAILURE)&quot;  location: &quot;JS frame :: chrome://marionette/content/driver.js :: GeckoDriver.prototype.maximizeWindow/windowSizeChange/&lt; :: line 3047&quot;  data: no]
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 17172, moz:profile: C:\Users\Silpa\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 69e4773c-de96-42bd-bee9-49de987ddbc5</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:657)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:891)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWindow.maximize(EventFiringWebDriver.java:685)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:55)
+<br/>at com.qa.appadmin.testCases.AppAdminAddStudiesPageTest.setup(AppAdminAddStudiesPageTest.java:39)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:setup</h2>
+<div style="padding-left:3em">
+<p>Failed to decode response from marionette
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 8448, moz:profile: C:\Users\Silpa\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 7e12e088-4d01-4891-9ae0-072b25e1a93e</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:657)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:891)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWindow.maximize(EventFiringWebDriver.java:685)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:55)
+<br/>at com.qa.appadmin.testCases.AppAdminConfigurationPageTest.setup(AppAdminConfigurationPageTest.java:38)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.qa.admin.testCases.AdminAddNewUserPageTest:setup</h2>
+<div style="padding-left:3em">
+<p>Process unexpectedly closed with status: 0
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: stack backtrace:
+   0:           0x47e934 - &lt;no info&gt;
+   1:           0x47f0a3 - &lt;no info&gt;
+   2:           0x442649 - &lt;no info&gt;
+   3:           0x449cc3 - &lt;no info&gt;
+   4:           0x42a890 - &lt;no info&gt;
+   5:           0x406f5e - &lt;no info&gt;
+   6:           0x40cfc9 - &lt;no info&gt;
+   7:           0x6bef19 - &lt;no info&gt;
+   8:           0x420756 - &lt;no info&gt;
+   9:           0x6b96e0 - &lt;no info&gt;
+  10:     0x7ffcf9503034 - BaseThreadInitThunk</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+<br/>at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+<br/>at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+<br/>at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:142)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:98)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:41)
+<br/>at com.qa.admin.testCases.AdminAddNewUserPageTest.setup(AdminAddNewUserPageTest.java:29)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.qa.admin.testCases.AdminLoginPageTest:setup</h2>
+<div style="padding-left:3em">
+<p>[Exception... &quot;Failure&quot;  nsresult: &quot;0x80004005 (NS_ERROR_FAILURE)&quot;  location: &quot;JS frame :: chrome://marionette/content/driver.js :: GeckoDriver.prototype.maximizeWindow/windowSizeChange/&lt; :: line 3047&quot;  data: no]
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14800, moz:profile: C:\Users\Silpa\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 8dd7d67a-e2f7-4d3d-afb4-7851e2ce7f16</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:657)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:891)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWindow.maximize(EventFiringWebDriver.java:685)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:55)
+<br/>at com.qa.admin.testCases.AdminLoginPageTest.setup(AdminLoginPageTest.java:28)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.qa.appadmin.testCases.AppAdminLoginPageTest:setup</h2>
+<div style="padding-left:3em">
+<p>Failed to decode response from marionette
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: stack backtrace:
+   0:           0x47e934 - &lt;no info&gt;
+   1:           0x47f0a3 - &lt;no info&gt;
+   2:           0x442511 - &lt;no info&gt;
+   3:           0x42b90e - &lt;no info&gt;
+   4:           0x406f5e - &lt;no info&gt;
+   5:           0x40cfc9 - &lt;no info&gt;
+   6:           0x6bef19 - &lt;no info&gt;
+   7:           0x420756 - &lt;no info&gt;
+   8:           0x6b96e0 - &lt;no info&gt;
+   9:     0x7ffcf9503034 - BaseThreadInitThunk</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+<br/>at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+<br/>at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+<br/>at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:142)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:98)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:41)
+<br/>at com.qa.appadmin.testCases.AppAdminLoginPageTest.setup(AppAdminLoginPageTest.java:24)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:setup</h2>
+<div style="padding-left:3em">
+<p>Failed to decode response from marionette
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: stack backtrace:
+   0:           0x47e934 - &lt;no info&gt;
+   1:           0x47f0a3 - &lt;no info&gt;
+   2:           0x442511 - &lt;no info&gt;
+   3:           0x42b90e - &lt;no info&gt;
+   4:           0x406f5e - &lt;no info&gt;
+   5:           0x40cfc9 - &lt;no info&gt;
+   6:           0x6bef19 - &lt;no info&gt;
+   7:           0x420756 - &lt;no info&gt;
+   8:           0x6b96e0 - &lt;no info&gt;
+   9:     0x7ffcf9503034 - BaseThreadInitThunk</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+<br/>at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+<br/>at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+<br/>at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:142)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:98)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:41)
+<br/>at com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest.setup(AppAdminDeleteConfirmationPageTest.java:38)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<div style="padding-left:3em">
+<p>Process unexpectedly closed with status: 0
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: stack backtrace:
+   0:           0x47e934 - &lt;no info&gt;
+   1:           0x47f0a3 - &lt;no info&gt;
+   2:           0x442649 - &lt;no info&gt;
+   3:           0x449cc3 - &lt;no info&gt;
+   4:           0x42a890 - &lt;no info&gt;
+   5:           0x406f5e - &lt;no info&gt;
+   6:           0x40cfc9 - &lt;no info&gt;
+   7:           0x6bef19 - &lt;no info&gt;
+   8:           0x420756 - &lt;no info&gt;
+   9:           0x6b96e0 - &lt;no info&gt;
+  10:     0x7ffcf9503034 - BaseThreadInitThunk</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+<br/>at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+<br/>at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+<br/>at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:142)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:98)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:41)
+<br/>at com.qa.appadmin.testCases.AppAdminReportPageTest.setup(AppAdminReportPageTest.java:33)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.qa.appadmin.testCases.AppAdminHomePageTest:setup</h2>
+<div style="padding-left:3em">
+<p>[Exception... &quot;Failure&quot;  nsresult: &quot;0x80004005 (NS_ERROR_FAILURE)&quot;  location: &quot;JS frame :: chrome://marionette/content/driver.js :: GeckoDriver.prototype.maximizeWindow/windowSizeChange/&lt; :: line 3047&quot;  data: no]
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 6360, moz:profile: C:\Users\Silpa\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 7811a2b7-7bf7-4483-8a12-95950c590703</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:657)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:891)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWindow.maximize(EventFiringWebDriver.java:685)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:55)
+<br/>at com.qa.appadmin.testCases.AppAdminHomePageTest.setup(AppAdminHomePageTest.java:38)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.qa.appadmin.testCases.AppAdminChangePasswordPageTest:tearDown</h2>
+<div style="padding-left:3em">
+<p>null</p>
+java.io.FileOutputStream.writeBytes(Native Method)
+<br/>at java.io.FileOutputStream.write(Unknown Source)
+<br/>at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+<br/>at java.io.BufferedOutputStream.write(Unknown Source)
+<br/>at java.io.PrintStream.write(Unknown Source)
+<br/>at org.apache.maven.surefire.booter.ForkingRunListener.writeTestOutput(ForkingRunListener.java:174)
+<br/>at org.apache.maven.surefire.report.ConsoleOutputCapture$ForwardingPrintStream.println(ConsoleOutputCapture.java:89)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:66)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>924 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:setup</h2>
+<div style="padding-left:3em">
+<p>Process unexpectedly closed with status: 0
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;DESKTOP-8SU807H&apos;, ip: &apos;192.168.10.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: stack backtrace:
+   0:           0x47e934 - &lt;no info&gt;
+   1:           0x47f0a3 - &lt;no info&gt;
+   2:           0x442649 - &lt;no info&gt;
+   3:           0x449cc3 - &lt;no info&gt;
+   4:           0x42a890 - &lt;no info&gt;
+   5:           0x406f5e - &lt;no info&gt;
+   6:           0x40cfc9 - &lt;no info&gt;
+   7:           0x6bef19 - &lt;no info&gt;
+   8:           0x420756 - &lt;no info&gt;
+   9:           0x6b96e0 - &lt;no info&gt;
+  10:     0x7ffcf9503034 - BaseThreadInitThunk</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+<br/>at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+<br/>at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+<br/>at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+<br/>at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+<br/>at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+<br/>at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:142)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:98)
+<br/>at com.qa.base.TestBase.initialization(TestBase.java:41)
+<br/>at com.qa.appadmin.testCases.AppAdminReportDownloadPageTest.setup(AppAdminReportDownloadPageTest.java:35)
+<br/>37 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.qa.admin.testCases.AdminHomePageTest:setup</h2>
+<div style="padding-left:3em">
+<p>null</p>
+java.io.FileOutputStream.writeBytes(Native Method)
+<br/>at java.io.FileOutputStream.write(Unknown Source)
+<br/>at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+<br/>at java.io.BufferedOutputStream.write(Unknown Source)
+<br/>at java.io.PrintStream.write(Unknown Source)
+<br/>at org.apache.maven.surefire.booter.ForkingRunListener.writeTestOutput(ForkingRunListener.java:174)
+<br/>at org.apache.maven.surefire.report.ConsoleOutputCapture$ForwardingPrintStream.println(ConsoleOutputCapture.java:89)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:66)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>924 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">com.qa.appadmin.testCases.AppAdminChangePasswordPageTest:verifyChangePassword</h2>
+<div style="padding-left:3em">
+<p>null</p>
+java.io.FileOutputStream.writeBytes(Native Method)
+<br/>at java.io.FileOutputStream.write(Unknown Source)
+<br/>at java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+<br/>at java.io.BufferedOutputStream.write(Unknown Source)
+<br/>at java.io.PrintStream.write(Unknown Source)
+<br/>at org.apache.maven.surefire.booter.ForkingRunListener.writeTestOutput(ForkingRunListener.java:174)
+<br/>at org.apache.maven.surefire.report.ConsoleOutputCapture$ForwardingPrintStream.println(ConsoleOutputCapture.java:89)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:66)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$1.invoke(EventFiringWebDriver.java:86)
+<br/>at com.sun.proxy.$Proxy5.onException(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:111)
+<br/>at com.sun.proxy.$Proxy6.getScreenshotAs(Unknown Source)
+<br/>at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:292)
+<br/>at com.qa.util.testUtil.takeScreenshotAtEndOfTest(testUtil.java:65)
+<br/>at com.qa.util.WebEventListener.onException(WebEventListener.java:68)
+<br/>at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>924 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">com.qa.admin.testCases.AdminAddNewUserPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">com.qa.admin.testCases.AdminAddNewUserPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">com.qa.admin.testCases.AdminAddNewUserPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">com.qa.admin.testCases.AdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">com.qa.appadmin.testCases.AppAdminHomePageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">com.qa.admin.testCases.AdminLoginPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">com.qa.appadmin.testCases.AppAdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">com.qa.admin.testCases.AdminAddNewUserPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m35">com.qa.appadmin.testCases.AppAdminHomePageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m36">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m37">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m39">com.qa.admin.testCases.AdminLoginPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m40">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m41">com.qa.appadmin.testCases.AppAdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m42">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m43">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m44">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m45">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m46">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m47">com.qa.admin.testCases.AdminAddNewUserPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m48">com.qa.admin.testCases.AdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m49">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m50">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m51">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m52">com.qa.appadmin.testCases.AppAdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m53">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m54">com.qa.appadmin.testCases.AppAdminHomePageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m55">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m56">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m57">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m58">com.qa.appadmin.testCases.AppAdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m59">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m60">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m61">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m62">com.qa.admin.testCases.AdminAddNewUserPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m63">com.qa.admin.testCases.AdminAddNewUserPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m64">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m65">com.qa.admin.testCases.AdminHomePageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m66">com.qa.admin.testCases.AdminHomePageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m67">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m68">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m69">com.qa.admin.testCases.AdminAddNewUserPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m70">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m71">com.qa.admin.testCases.AdminAddNewUserPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m72">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m73">com.qa.appadmin.testCases.AppAdminLoginPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m74">com.qa.appadmin.testCases.AppAdminLoginPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m75">com.qa.admin.testCases.AdminLoginPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m76">com.qa.admin.testCases.AdminAddNewUserPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m77">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m78">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m79">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m80">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m81">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m82">com.qa.admin.testCases.AdminAddNewUserPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m83">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m84">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m85">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m86">com.qa.admin.testCases.AdminLoginPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m87">com.qa.admin.testCases.AdminLoginPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m88">com.qa.appadmin.testCases.AppAdminLoginPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m89">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m90">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m91">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m92">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m93">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m94">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m95">com.qa.appadmin.testCases.AppAdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m96">com.qa.admin.testCases.AdminHomePageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m97">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m98">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m99">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m100">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m101">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m102">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m103">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m104">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m105">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m106">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m107">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m108">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m109">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m110">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m111">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m112">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m113">com.qa.admin.testCases.AdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m114">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m115">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m116">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m117">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m118">com.qa.admin.testCases.AdminAddNewUserPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m119">com.qa.appadmin.testCases.AppAdminHomePageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m120">com.qa.admin.testCases.AdminHomePageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m121">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m122">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m123">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m124">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m125">com.qa.appadmin.testCases.AppAdminHomePageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m126">com.qa.admin.testCases.AdminAddNewUserPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m127">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m128">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m129">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m130">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m131">com.qa.appadmin.testCases.AppAdminReportPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m132">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m133">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m134">com.qa.appadmin.testCases.AppAdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m135">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m136">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m137">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m138">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m139">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m140">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m141">com.qa.admin.testCases.AdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m142">com.qa.appadmin.testCases.AppAdminReportPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m143">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m144">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m145">com.qa.admin.testCases.AdminHomePageTest:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m146">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:setup</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m147">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:verifyClickOnConfigLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m148">com.qa.admin.testCases.AdminAddNewUserPageTest:verifyAddNewUsers</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr>
+<tr class="param stripe"><td>anu@gmail.com</td>
+<td>anu</td>
+<td>b</td>
+<td>123.0</td>
+<td>123.0</td>
+<td>appadmin</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m149">com.qa.appadmin.testCases.AppAdminReportPageTest:verifyUserNameTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m150">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:verifySubmitButtonTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr>
+<tr class="param stripe"><td>108</td>
+<td>study1</td>
+<td>title1</td>
+<td>1</td>
+<td>true</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m151">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:verifySubmitButtonTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr>
+<tr class="param stripe"><td>103</td>
+<td>study4</td>
+<td>title4</td>
+<td>4</td>
+<td>true</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m152">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:verifyMenuClick</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m153">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:verifySubmitButtonTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr>
+<tr class="param stripe"><td>101</td>
+<td>study2</td>
+<td>title2</td>
+<td>2.0</td>
+<td>true</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m154">com.qa.appadmin.testCases.AppAdminReportPageTest:verifyReportPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>5</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m155">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:ChangePasswordTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m156">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:verifyDeleteButton</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m157">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:LogoutTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m158">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:verifyUserNameTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m159">com.qa.appadmin.testCases.AppAdminLoginPageTest:loginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m160">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:LogoutTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m161">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:verifyUserNameTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m162">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:verifyPreviewButton</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m163">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:verifyClickOnApplyLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m164">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:DeletePageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m165">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:verifyClickOnDeleteLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m166">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:ChangePasswordTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m167">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:ChangePasswordTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m168">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:verifyDownloadLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m169">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:verifyBackLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m170">com.qa.appadmin.testCases.AppAdminReportPageTest:ChangePasswordTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m171">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:verifyClickOnViewLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m172">com.qa.appadmin.testCases.AppAdminHomePageTest:ConfigurationTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m173">com.qa.appadmin.testCases.AppAdminLoginPageTest:norwichLogoTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m174">com.qa.appadmin.testCases.AppAdminHomePageTest:ChangePasswordTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m175">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:ChangePasswordTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m176">com.qa.appadmin.testCases.AppAdminReportPageTest:verifyReportPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>4</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m177">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:verifyUserNameTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m178">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:DeletePageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m179">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:ChangePasswordTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m180">com.qa.appadmin.testCases.AppAdminReportPageTest:verifyReportPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>1</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m181">com.qa.admin.testCases.AdminAddNewUserPageTest:verifyAddNewUsers</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr>
+<tr class="param stripe"><td>appu@gmail.com</td>
+<td>appu</td>
+<td>e</td>
+<td>123.0</td>
+<td>123.0</td>
+<td>qa</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m182">com.qa.admin.testCases.AdminAddNewUserPageTest:verifyAddNewUsers</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr>
+<tr class="param stripe"><td>achu@gmail.com</td>
+<td>achu</td>
+<td>d</td>
+<td>123.0</td>
+<td>123.0</td>
+<td>pi</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m183">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:verifySubmitButtonTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr>
+<tr class="param stripe"><td>102</td>
+<td>study3</td>
+<td>title3</td>
+<td>3.0</td>
+<td>false</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m184">com.qa.admin.testCases.AdminHomePageTest:ListUserTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m185">com.qa.appadmin.testCases.AppAdminReportPageTest:verifyReportPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>3</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m186">com.qa.admin.testCases.AdminHomePageTest:ChangePasswordTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m187">com.qa.appadmin.testCases.AppAdminReportPageTest:LogoutTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m188">com.qa.admin.testCases.AdminLoginPageTest:norwichLogoTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m189">com.qa.appadmin.testCases.AppAdminHomePageTest:LogoutTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m190">com.qa.admin.testCases.AdminAddNewUserPageTest:verifyAddUserPageUserNameTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m191">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:verifyUpdateButton</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m192">com.qa.admin.testCases.AdminHomePageTest:LogoutTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m193">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:LogoutTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m194">com.qa.appadmin.testCases.AppAdminHomePageTest:homePageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m195">com.qa.appadmin.testCases.AppAdminHomePageTest:ReportsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m196">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:verifyClickOnAddNewLink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m197">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:verifyCRFReadyButton</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m198">com.qa.appadmin.testCases.AppAdminReportPageTest:homePageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m199">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:verifyUserNameTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m200">com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest:verifyCancelButton</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m201">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:LogoutTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m202">com.qa.admin.testCases.AdminHomePageTest:AddNewUserTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m203">com.qa.admin.testCases.AdminLoginPageTest:loginPageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m204">com.qa.admin.testCases.AdminAddNewUserPageTest:verifyAddNewUsers</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr>
+<tr class="param stripe"><td>unni@gmail.com</td>
+<td>unni</td>
+<td>c</td>
+<td>123.0</td>
+<td>123.0</td>
+<td>dataentry</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m205">com.qa.admin.testCases.AdminAddNewUserPageTest:addNewUserPageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m206">com.qa.appadmin.testCases.AppAdminReportPageTest:verifyReportPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>2</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m207">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:LogoutTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m208">com.qa.admin.testCases.AdminAddNewUserPageTest:verifyAddNewUsers</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr>
+<tr class="param stripe"><td>akku@gmail.com</td>
+<td>ammu</td>
+<td>a</td>
+<td>123.0</td>
+<td>123.0</td>
+<td>admin</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m209">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:verifyUserNameTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m210">com.qa.appadmin.testCases.AppAdminReportDownloadPageTest:reportDownloadPageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m211">com.qa.admin.testCases.AdminHomePageTest:verifyUserNameTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m212">com.qa.appadmin.testCases.AppAdminConfigurationPageTest:ConfigPageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m213">com.qa.admin.testCases.AdminLoginPageTest:loginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m214">com.qa.appadmin.testCases.AppAdminEditStudiesPageTest:verifyCancelButton</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m215">com.qa.appadmin.testCases.AppAdminAddStudiesPageTest:StudiesPageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m216">com.qa.appadmin.testCases.AppAdminHomePageTest:verifyUserNameTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m217">com.qa.appadmin.testCases.AppAdminReportPageTest:verifyReportPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>0</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m218">com.qa.appadmin.testCases.AppAdminReportPageTest:verifyReportPage</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>6</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m219">com.qa.admin.testCases.AdminHomePageTest:homePageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m220">com.qa.appadmin.testCases.AppAdminLoginPageTest:loginPageTitleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="My norwich application" verbose="1" >
+  <test name="My norwich Test" >
+  
+  	<listeners>
+		<listener class-name="com.qa.ExtentReportListener.ExtentReportListener" />
+	</listeners>
+  
+    <classes>
+      <class name="com.qa.admin.testCases.AdminLoginPageTest"/>
+      <class name="com.qa.admin.testCases.AdminHomePageTest"/>
+      <class name="com.qa.admin.testCases.AdminAddNewUserPageTest"/>
+    </classes>
+ </test>
+</suite>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [My norwich application]">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListener.ExtentReportListener"/>
+  </listeners>
+  <test name="My norwich Test(failed)">
+    <classes>
+      <class name="com.qa.admin.testCases.AdminAddNewUserPageTest">
+        <methods>
+          <include name="verifyAddNewUsers"/>
+          <include name="addNewUserPageTitleTest"/>
+          <include name="verifyAddUserPageUserNameTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.admin.testCases.AdminAddNewUserPageTest -->
+      <class name="com.qa.admin.testCases.AdminLoginPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.qa.admin.testCases.AdminLoginPageTest -->
+      <class name="com.qa.admin.testCases.AdminHomePageTest">
+        <methods>
+          <include name="ListUserTest"/>
+          <include name="LogoutTest"/>
+          <include name="verifyUserNameTest"/>
+          <include name="AddNewUserTest"/>
+          <include name="homePageTitleTest"/>
+          <include name="ChangePasswordTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.admin.testCases.AdminHomePageTest -->
+    </classes>
+  </test> <!-- My norwich Test(failed) -->
+</suite> <!-- Failed suite [My norwich application] -->

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.qa.appadmin.testCases.AppAdminConfigurationPageTest">
+        <methods>
+          <include name="verifyClickOnConfigLink"/>
+          <include name="ConfigPageTitleTest"/>
+          <include name="LogoutTest"/>
+          <include name="setup"/>
+          <include name="verifyClickOnViewLink"/>
+          <include name="ChangePasswordTest"/>
+          <include name="verifyClickOnAddNewLink"/>
+          <include name="verifyClickOnDeleteLink"/>
+          <include name="verifyUserNameTest"/>
+          <include name="verifyClickOnApplyLink"/>
+        </methods>
+      </class> <!-- com.qa.appadmin.testCases.AppAdminConfigurationPageTest -->
+      <class name="com.qa.appadmin.testCases.AppAdminReportDownloadPageTest">
+        <methods>
+          <include name="LogoutTest"/>
+          <include name="verifyMenuClick"/>
+          <include name="verifyUserNameTest"/>
+          <include name="ChangePasswordTest"/>
+          <include name="verifyDownloadLink"/>
+          <include name="setup"/>
+          <include name="reportDownloadPageTitleTest"/>
+          <include name="verifyBackLink"/>
+        </methods>
+      </class> <!-- com.qa.appadmin.testCases.AppAdminReportDownloadPageTest -->
+      <class name="com.qa.appadmin.testCases.AppAdminAddStudiesPageTest">
+        <methods>
+          <include name="verifyUserNameTest"/>
+          <include name="ChangePasswordTest"/>
+          <include name="LogoutTest"/>
+          <include name="verifySubmitButtonTest"/>
+          <include name="setup"/>
+          <include name="StudiesPageTitleTest"/>
+        </methods>
+      </class> <!-- com.qa.appadmin.testCases.AppAdminAddStudiesPageTest -->
+      <class name="com.qa.admin.testCases.AdminLoginPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="loginTest"/>
+          <include name="norwichLogoTest"/>
+          <include name="loginPageTitleTest"/>
+        </methods>
+      </class> <!-- com.qa.admin.testCases.AdminLoginPageTest -->
+      <class name="com.qa.admin.testCases.AdminHomePageTest">
+        <methods>
+          <include name="ListUserTest"/>
+          <include name="LogoutTest"/>
+          <include name="verifyUserNameTest"/>
+          <include name="AddNewUserTest"/>
+          <include name="tearDown"/>
+          <include name="ChangePasswordTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.admin.testCases.AdminHomePageTest -->
+      <class name="com.qa.appadmin.testCases.AppAdminChangePasswordPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyChangePassword"/>
+        </methods>
+      </class> <!-- com.qa.appadmin.testCases.AppAdminChangePasswordPageTest -->
+      <class name="com.qa.appadmin.testCases.AppAdminLoginPageTest">
+        <methods>
+          <include name="norwichLogoTest"/>
+          <include name="loginTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.appadmin.testCases.AppAdminLoginPageTest -->
+      <class name="com.qa.admin.testCases.AdminAddNewUserPageTest">
+        <methods>
+          <include name="verifyAddNewUsers"/>
+          <include name="addNewUserPageTitleTest"/>
+          <include name="verifyAddUserPageUserNameTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.admin.testCases.AdminAddNewUserPageTest -->
+      <class name="com.qa.appadmin.testCases.AppAdminHomePageTest">
+        <methods>
+          <include name="ChangePasswordTest"/>
+          <include name="ReportsTest"/>
+          <include name="verifyUserNameTest"/>
+          <include name="setup"/>
+          <include name="ConfigurationTest"/>
+          <include name="LogoutTest"/>
+          <include name="homePageTitleTest"/>
+        </methods>
+      </class> <!-- com.qa.appadmin.testCases.AppAdminHomePageTest -->
+      <class name="com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest">
+        <methods>
+          <include name="verifyUserNameTest"/>
+          <include name="ChangePasswordTest"/>
+          <include name="verifyCancelButton"/>
+          <include name="verifyDeleteButton"/>
+          <include name="setup"/>
+          <include name="LogoutTest"/>
+          <include name="DeletePageTitleTest"/>
+        </methods>
+      </class> <!-- com.qa.appadmin.testCases.AppAdminDeleteConfirmationPageTest -->
+      <class name="com.qa.appadmin.testCases.AppAdminEditStudiesPageTest">
+        <methods>
+          <include name="DeletePageTitleTest"/>
+          <include name="verifyCRFReadyButton"/>
+          <include name="verifyPreviewButton"/>
+          <include name="LogoutTest"/>
+          <include name="verifyCancelButton"/>
+          <include name="verifyUpdateButton"/>
+          <include name="setup"/>
+          <include name="verifyUserNameTest"/>
+          <include name="ChangePasswordTest"/>
+        </methods>
+      </class> <!-- com.qa.appadmin.testCases.AppAdminEditStudiesPageTest -->
+      <class name="com.qa.appadmin.testCases.AppAdminReportPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="homePageTitleTest"/>
+          <include name="ChangePasswordTest"/>
+          <include name="LogoutTest"/>
+          <include name="verifyUserNameTest"/>
+          <include name="verifyReportPage"/>
+        </methods>
+      </class> <!-- com.qa.appadmin.testCases.AppAdminReportPageTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
